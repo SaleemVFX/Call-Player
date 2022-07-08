@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Call_Player"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="510" Width="1052">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGrid" IsReadOnly="True" SelectionChanged="dataGrid_SelectionChanged" />
+        <Button x:Name="button" Grid.Column="1" Content="Folder" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="28" Width="86" Click="button_Click"/>
+        <Button x:Name="button1" Grid.Column="1" Content="Load Calls" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Height="31" Width="86"/>
+        <Label x:Name="label" Grid.Column="1" Content="Caller:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Grid.Column="1" Content="File" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="caller_txtBx" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="58,114,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="file_txtBx" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="58,145,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="call_dest" Grid.Column="1" Content="Select Folder" HorizontalAlignment="Left" Margin="120,11,0,0" VerticalAlignment="Top"/>
+        <ProgressBar x:Name="progressBr" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="10,187,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="btn_play" Grid.Column="1" Content="Play" HorizontalAlignment="Left" Margin="17,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="30" Width="74" Click="btn_play_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.203"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btn_stop" Grid.Column="1" Content="Stop" HorizontalAlignment="Left" Margin="120,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Height="30" Width="74" Click="btn_stop_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.203"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
     </Grid>
 </Window>
