@@ -9,7 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3.5*"/>
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="dataGrid" IsReadOnly="True" SelectionChanged="dataGrid_SelectionChanged" />
         <Button x:Name="button" Grid.Column="1"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="36" Width="92" Click="button_Click">
@@ -19,18 +19,18 @@
             </StackPanel>
         </Button>
         <Label x:Name="label" Grid.Column="1" Content="Caller:" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Height="26" Width="42" FontWeight="Bold"/>
-        <Label x:Name="label1" Grid.Column="1" Content="File" HorizontalAlignment="Left" Margin="10,312,0,0" VerticalAlignment="Top" Height="26" Width="28" FontWeight="Bold"/>
+        <Label x:Name="label1" Grid.Column="1" Content="File" HorizontalAlignment="Left" Margin="10,312,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="caller_txtBx" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="58,281,0,0" VerticalAlignment="Top" Height="26"/>
         <Label x:Name="file_txtBx" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="58,312,0,0" VerticalAlignment="Top" Height="26"/>
         <Label x:Name="call_dest" Grid.Column="1" Content="Selected Folder" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Height="26"/>
-        <ProgressBar x:Name="progressBr" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="10,354,0,0" VerticalAlignment="Top" Width="250"/>
-        <Button x:Name="btn_play" Grid.Column="1" HorizontalAlignment="Left" Margin="17,399,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="40" Width="100" Click="btn_play_Click" FontWeight="Bold" FontSize="14">
+        <ProgressBar x:Name="progressBr" Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="45,354,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button x:Name="btn_play" Grid.Column="1" HorizontalAlignment="Left" Margin="17,426,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="40" Width="100" Click="btn_play_Click" FontWeight="Bold" FontSize="14">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="image" Source="/play (2).png" Height="25" Width="35"/>
                 <Label x:Name="label3" Content="Play" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"/>
             </StackPanel>
         </Button>
-        <Button x:Name="btn_stop" Grid.Column="1" HorizontalAlignment="Left" Margin="130,399,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="40" Width="100" Click="btn_stop_Click" FontWeight="Bold" FontSize="14">
+        <Button x:Name="btn_stop" Grid.Column="1" HorizontalAlignment="Left" Margin="130,426,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="40" Width="100" Click="btn_stop_Click" FontWeight="Bold" FontSize="14">
             <StackPanel Orientation="Horizontal">
                 <Image x:Name="image2" Height="25" Width="35" Source="/stop (1).png"/>
                 <Label x:Name="label5" Content="Stop" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"/>
@@ -40,6 +40,8 @@
         <Label x:Name="label_Copy" Grid.Column="1" Content="Caller Filter:" HorizontalAlignment="Left" Margin="6,171,0,0" VerticalAlignment="Top" Height="26" Width="72"/>
         <Label x:Name="label2" Grid.Column="1" Content="by Saleem Ali" Margin="0,0,10,10" Height="26" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="82"/>
         <CheckBox x:Name="checkBox" Grid.Column="1" Content="Save Folder" HorizontalAlignment="Left" Margin="13,97,0,0" VerticalAlignment="Top" Click="checkBox_Click" Height="15" Width="81"/>
+        <Label x:Name="curr_time" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="8,351,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="total_time" Grid.Column="1" Content="" HorizontalAlignment="Left" Margin="300,351,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

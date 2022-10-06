@@ -157,7 +157,7 @@ namespace Call_Player
             outputDevice?.Stop();
         }
 
-        //Play button function, Also it updates the progress bar
+        //Play button function, Also it updates the progress bar, current time, total time 
         private async void btn_play_Click(object sender, RoutedEventArgs e)
         {
             total = 0.0;
@@ -174,6 +174,7 @@ namespace Call_Player
                 total = audioFile.TotalTime.TotalSeconds;
                 outputDevice.Init(audioFile);
                 outputDevice.Play();
+                total_time.Content = Math.Round(total,1).ToString("0.00");
                 //Progress bar async task 
                 await Task.Run(delegate
                 {
@@ -183,9 +184,11 @@ namespace Call_Player
                     {
                         curr = audioFile.CurrentTime.TotalSeconds;
                         progressBr.Dispatcher.Invoke(() => progressBr.Value = curr);
+                        curr_time.Dispatcher.Invoke(() => curr_time.Content= Math.Round(curr,1).ToString("0.00"));
                         Trace.WriteLine(curr.ToString());
                     }
                 });
+
             }
             Trace.WriteLine(total.ToString());
         }
@@ -197,6 +200,8 @@ namespace Call_Player
             outputDevice = null;
             audioFile.Dispose();
             audioFile = null;
+            curr_time.Content = "0.00";
+            total_time.Content = "0.00";
             progressBr.Dispatcher.Invoke(() => progressBr.Value = 0);
         }
 
