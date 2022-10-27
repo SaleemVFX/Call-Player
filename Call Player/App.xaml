@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:Call_Player"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
     </Application.Resources>
 </Application>

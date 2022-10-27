@@ -152,9 +152,14 @@ namespace Call_Player
         //Stop button function 
         private void btn_stop_Click(object sender, RoutedEventArgs e)
         {
-            curr = total + 2.0; //idk why i put this
-            progressBr.Dispatcher.Invoke(() => progressBr.Value = 0.0); //supposed to clear progress bar not working ?
-            outputDevice?.Stop();
+            StopPlayback();
+        }
+
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            StopPlayback();
         }
 
         //Play button function, Also it updates the progress bar, current time, total time 
@@ -193,6 +198,14 @@ namespace Call_Player
             Trace.WriteLine(total.ToString());
         }
 
+        //Stops the playback progressbar and audio.
+        private void StopPlayback()
+        {
+            curr = total + 2.0; //idk why i put this
+            progressBr.Dispatcher.Invoke(() => progressBr.Value = 0.0); //supposed to clear progress bar not working ?
+            outputDevice?.Stop();
+        }
+
         //Stops the current file, clear audio device and progress bar.
         private void OnPlaybackStopped(object sender, StoppedEventArgs args)
         {
@@ -210,6 +223,7 @@ namespace Call_Player
         {
             if (dataGrid.SelectedIndex != -1)//Chec
             {
+                btn_stop_Click(sender, e); // Stopes playback when selecting another call in the list
                 System.Windows.Controls.DataGrid dataGrid = sender as System.Windows.Controls.DataGrid;
                 DataGridRow row = (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromIndex(dataGrid.SelectedIndex);
                 System.Windows.Controls.DataGridCell cell = dataGrid.Columns[2].GetCellContent(row).Parent as System.Windows.Controls.DataGridCell;

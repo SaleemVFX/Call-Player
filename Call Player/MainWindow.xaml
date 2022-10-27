@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Call_Player"
         mc:Ignorable="d"
         Title="Call Player " Height="510" Width="1052" Icon="/play.png">
-    <Grid>
+    <Grid Background="Transparent">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="7*"/>
             <ColumnDefinition Width="3.5*"/>
@@ -18,8 +18,8 @@
                 <Label x:Name="label4" Content="Folder" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12"/>
             </StackPanel>
         </Button>
-        <Label x:Name="label" Grid.Column="1" Content="Caller:" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Height="26" Width="42" FontWeight="Bold"/>
-        <Label x:Name="label1" Grid.Column="1" Content="File" HorizontalAlignment="Left" Margin="10,312,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label x:Name="label" Grid.Column="1" Content="Caller:" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold"/>
+        <Label x:Name="label1" Grid.Column="1" Content="File:" HorizontalAlignment="Left" Margin="10,312,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label x:Name="caller_txtBx" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="58,281,0,0" VerticalAlignment="Top" Height="26"/>
         <Label x:Name="file_txtBx" Grid.Column="1" Content="Label" HorizontalAlignment="Left" Margin="58,312,0,0" VerticalAlignment="Top" Height="26"/>
         <Label x:Name="call_dest" Grid.Column="1" Content="Selected Folder" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Height="26"/>
